@@ -1,0 +1,85 @@
+body {
+    background-image: url("src/bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: sans-serif;
+    color: white;
+    overflow-x: hidden;
+}
+
+body * {
+    margin: 0;
+    top: 0;
+    left: 0;
+    padding: 0;
+}
+
+header {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    align-items: center;
+
+
+}
+
+h1 {
+    font-size: 200px;
+    text-align: center;
+    font-weight: 100;
+    letter-spacing: 52px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, .75);
+}
+
+
+main {
+    /* ledsen att jag använde absolute men relative skapa glapp mellan div och body */
+    /* styling */
+    position: absolute;
+    top: 100vh;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: black;
+    -moz-box-shadow:      0 300px 500px 500px black;
+    -webkit-box-shadow:   0 300px 500px 500px black;
+     box-shadow:          0 300px 500px 500px black;
+
+
+    /* grid */
+    grid-template: 1/repeat(20, 1fr);
+}
+
+.grid {
+    display: grid;
+    background: rgb(15, 15, 15);
+    margin: 20px 20%;
+    padding: 2rem;
+    border: 2px solid rgb(25, 25, 25);
+    border-radius: 20px;
+    color: rgb(175, 175, 175);
+}
+
+.grid * {
+    margin: 5px 0;
+}
+
+a {
+    color: rgb(175, 175, 175);
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    width: min-content;
+    transition: 1s;
+}
+
+a:hover {
+    border-bottom: 2px solid rgb(175, 175, 175);
+}
+
+.grid::before {
+    content: icon;
+}
