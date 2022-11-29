@@ -54,32 +54,34 @@ main {
     grid-template: 1/repeat(20, 1fr);
 }
 
+.desc {
+    margin: 5%;
+    color: rgb(200, 200, 200);
+}
+
 .grid {
-    display: grid;
+    display: flex;
     background: rgb(15, 15, 15);
     margin: 20px 20%;
     padding: 2rem;
     border: 2px solid rgb(25, 25, 25);
     border-radius: 20px;
-    color: rgb(175, 175, 175);
+    color: rgb(200, 200, 200);
 }
 
-.grid * {
-    margin: 5px 0;
+.f {
+    margin: 30px;
 }
 
 a {
-    color: rgb(175, 175, 175);
+    color: rgb(108, 110, 174);
     text-decoration: none;
     border-bottom: 2px solid transparent;
-    width: min-content;
+    width:max-content;
     transition: 1s;
 }
 
 a:hover {
-    border-bottom: 2px solid rgb(175, 175, 175);
+    border-bottom: 2px solid rgb(108, 110, 174);
 }
 
-.grid::before {
-    content: icon;
-}
