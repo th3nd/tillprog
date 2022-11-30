@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    background-image: url("src/bg.png");
+    background-image: url("src/bg.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     font-family: sans-serif;
@@ -18,21 +18,35 @@ body * {
     padding: 0;
 }
 
+.a {
+    display: flex;
+}
+
+.logo {
+    flex: 80;
+}
+
 nav {
+
+    flex: 20;
+
     z-index: 99;
     position: relative;
     display: flex;
+    width: 100%;
+    align-items: flex-end;
 }
 
 nav * {
     font-size: 20px;
-    margin: 2rem;
-    align-self: flex-end;
+    margin: 1rem 2rem;
+    /* align-self: flex-end; */
 }
 
-nav h2 {
-    flex: 80;
+
+.logo img {
     color: rgba(255, 255, 255, .75);
+    width: 75px;
 }
 
 nav a {
@@ -70,7 +84,7 @@ header h1 {
 main {
     /* ledsen att jag använde absolute men relative skapa glapp mellan div och body */
     /* styling */
-    position: absolute;
+    position: relative;
     top: 100vh;
     left: 0;
     width: 100vw;
@@ -124,6 +138,24 @@ main {
     border-bottom: 2px solid rgb(108, 110, 174);
 }
 
+
+footer {
+    color: white;
+    background-color: violet;
+    display: flex;
+    width: 100vw;
+    align-items: center;
+    padding: 2% 20%;
+}
+
+footer ul {
+    display: block;
+    margin: 2% 10vw;
+
+
+    text-align: center;
+    
+}
 
 @media screen and (max-width: 920px) {
     header,
