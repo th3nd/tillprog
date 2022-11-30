@@ -99,7 +99,7 @@ main {
     display: flex;
     margin: 20px 25%;
     padding: 1rem;
-    border: 3px solid rgb(25, 25, 25);
+    border: 1px solid rgb(25, 25, 25);
     border-radius: 20px;
     color: rgb(200, 200, 200);
 }
@@ -126,7 +126,8 @@ main {
 
 
 @media screen and (max-width: 920px) {
-    header {
+    header,
+    nav {
         display: none;
     }
 
@@ -136,7 +137,7 @@ main {
 
     .grid {
         display: grid;
-        grid-template: 1fr 1fr / auto;
+        grid-template: auto auto / auto;
         margin: 20px 5%;
     }
 }
