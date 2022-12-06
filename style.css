@@ -142,20 +142,42 @@ main {
 
 footer {
     color: white;
-    background-color: violet;
-    display: flex;
+    background: rgb(10, 10, 10);
     width: 100vw;
+    padding: 2% 10%;
+    margin-top: 10%;
+    border: 1px solid rgb(25, 25, 25);
+}
+
+.links {
+    display: flex;
     align-items: center;
-    padding: 2% 20%;
+    width: 40%;
+    margin: 0 20%;
 }
 
 footer ul {
     display: block;
-    margin: 2% 10vw;
-
-
+    /* background: rgb(20, 20, 20); */
+    padding: 2rem;
     text-align: center;
-    
+    flex: 1;
+
+    list-style: none;
+    color: rgb(200, 200, 200);
+}
+
+footer ul li {
+    margin: 5px 0;
+}
+
+footer ul li a {
+    color: rgb(200, 200, 200);
+    transition: 200ms;
+}
+
+footer ul li a:hover {
+    color: rgb(108, 110, 174);
 }
 
 @media screen and (max-width: 920px) {
