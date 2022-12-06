@@ -1,0 +1,58 @@
+body {
+    background: #000;
+    color: rgb(200, 200, 200);
+    font-family: sans-serif;
+}
+
+* {
+    margin: 0;
+    top: 0;
+    left: 0;
+    padding: 0;
+}
+
+.wrap {
+    position: relative;
+    top: 50vh;
+    translate: 0 -50%;
+
+    margin: auto;
+    width: fit-content;
+    height: fit-content;
+    /* fixa färg pls*/
+    background: rgb(10, 10, 10);
+    border: 1px rgb(25, 25, 25) solid;
+    padding: 5%;
+
+    text-align: center;
+}
+
+.wrap * {
+    margin: 5px;
+}
+
+h2 {
+    font-weight: 400;
+}
+
+button {
+    padding: 10px;
+}
+
+.barfg,
+.barbg {
+    position: relative;
+    width: 30vw;
+    height: 10px;
+}
+
+.barbg {
+    background: rgb(40, 40, 40);
+    border: 1px solid rgb(70, 70, 70);
+}
+
+.barfg {
+    background: red;
+    height: 10px;
+    translate: 1px calc(-100% - 1px - 5px);
+}
