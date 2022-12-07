@@ -10,12 +10,37 @@
 </head>
 <body>
     <div class="wrap">
-        <h2>episode 1 - Twitter</h2>
-        <button>play</button>
+        <h2>Episode - Twitter</h2>
+        <svg onclick='pause()' xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path class='btn' fill="#ffffff" d="M3 22v-20l18 10-18 10z"/></svg>
         <div class="bar">
-            <div class="barbg"></div>
-            <div class="barfg"></div>
+        <div class="barbg"></div>
+        <div class="barfg"></div>
         </div>
     </div>
+
+    <script>
+        const audio = new Audio('src/podcast.mp4')
+        let barbg = document.querySelector('.barbg')
+        let bar = document.querySelector('.barfg')
+        let btn = document.querySelector('.btn')
+        function pause() {
+            if (audio.paused) {
+                audio.play()
+                btn.setAttribute('d', 'M11 22h-4v-20h4v20zm6-20h-4v20h4v-20z')
+            }
+            else {
+                audio.pause()
+                btn.setAttribute('d', "M3 22v-20l18 10-18 10z")
+            }
+
+        }
+
+        function loop() {
+            bar.style.width = parseInt(audio.currentTime / audio.duration * barbg.clientWidth) + 'px'
+            setTimeout(loop, 10)
+        }
+
+        loop()
+    </script>
 </body>
 </html>

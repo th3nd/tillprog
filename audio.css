@@ -20,7 +20,8 @@ body {
     width: fit-content;
     height: fit-content;
     /* fixa färg pls*/
-    background: rgb(10, 10, 10);
+    /* background: rgb(10, 10, 10); */
+    border-radius: 10px;
     border: 1px rgb(25, 25, 25) solid;
     padding: 5%;
 
@@ -32,7 +33,9 @@ body {
 }
 
 h2 {
-    font-weight: 400;
+    font-weight: 100;
+    font-size: large;
+    color: rgb(129, 129, 129);
 }
 
 button {
@@ -44,15 +47,34 @@ button {
     position: relative;
     width: 30vw;
     height: 10px;
+    border-radius: 5px;
 }
 
 .barbg {
-    background: rgb(40, 40, 40);
-    border: 1px solid rgb(70, 70, 70);
+    background: rgb(10, 10, 10);
+    border: 1px solid rgb(36, 36, 36);
 }
 
 .barfg {
-    background: red;
+    background: rgb(108, 110, 174);
     height: 10px;
+    width: 0%;
     translate: 1px calc(-100% - 1px - 5px);
+    animation: load 1.2s ease-out;
+}
+
+
+svg {
+    padding: 5px;
+    transition: 200ms;
+}
+svg:hover {
+    border-radius: 10px;
+    background: rgb(25, 25, 25);
+}
+
+@keyframes load {
+    0% {
+        width: 100%;
+    }
 }
