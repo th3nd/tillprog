@@ -21,7 +21,7 @@ body {
     height: fit-content;
     /* fixa färg pls*/
     /* background: rgb(10, 10, 10); */
-    border-radius: 10px;
+    border-radius: 20px;
     border: 1px rgb(25, 25, 25) solid;
     padding: 5%;
 
@@ -51,8 +51,9 @@ button {
 }
 
 .barbg {
-    background: rgb(10, 10, 10);
+    background: transparent;
     border: 1px solid rgb(36, 36, 36);
+    z-index: 99;
 }
 
 .barfg {

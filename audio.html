@@ -13,7 +13,7 @@
         <h2>Episode - Twitter</h2>
         <svg onclick='pause()' xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path class='btn' fill="#ffffff" d="M3 22v-20l18 10-18 10z"/></svg>
         <div class="bar">
-        <div class="barbg"></div>
+        <div class="barbg" onclick="hover()"></div>
         <div class="barfg"></div>
         </div>
     </div>
@@ -23,6 +23,7 @@
         let barbg = document.querySelector('.barbg')
         let bar = document.querySelector('.barfg')
         let btn = document.querySelector('.btn')
+        
         function pause() {
             if (audio.paused) {
                 audio.play()
@@ -32,7 +33,15 @@
                 audio.pause()
                 btn.setAttribute('d', "M3 22v-20l18 10-18 10z")
             }
+        }
+        
+        let pos = [0, 0]
+        addEventListener('mousemove', (e) => {
+            pos = [e.offsetX, e.offsetY]
+        })
 
+        function hover() {
+            audio.currentTime = (audio.duration * pos[0] / barbg.clientWidth)
         }
 
         function loop() {
