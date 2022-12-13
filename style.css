@@ -94,7 +94,7 @@ main {
 
 
     /* grid */
-    grid-template: 1/repeat(20, 1fr);
+    grid-template: auto/repeat(20, 1fr);
 }
 
 #desc {
