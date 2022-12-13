@@ -1,29 +1,27 @@
 body {
     background: #000;
-    color: rgb(200, 200, 200);
     font-family: sans-serif;
+    color: rgb(200, 200, 200);
 }
 
 * {
-    margin: 0;
     top: 0;
     left: 0;
+    margin: 0;
     padding: 0;
 }
 
 .wrap {
-    position: relative;
     top: 50vh;
     translate: 0 -50%;
+    position: relative;
 
+    padding: 5%;
     margin: auto;
     width: fit-content;
     height: fit-content;
-    /* fixa färg pls*/
-    /* background: rgb(10, 10, 10); */
     border-radius: 20px;
     border: 1px rgb(25, 25, 25) solid;
-    padding: 5%;
 
     text-align: center;
 }
@@ -44,24 +42,26 @@ button {
 
 .barfg,
 .barbg {
-    position: relative;
     width: 30vw;
     height: 10px;
+    position: relative;
     border-radius: 5px;
 }
 
+/* bar background */
 .barbg {
+    z-index: 99;
     background: transparent;
     border: 1px solid rgb(36, 36, 36);
-    z-index: 99;
 }
 
+/* bar forground */
 .barfg {
-    background: rgb(108, 110, 174);
-    height: 10px;
     width: 0%;
-    translate: 1px calc(-100% - 1px - 5px);
+    height: 10px;
     animation: load 1.2s ease-out;
+    background: rgb(108, 110, 174);
+    translate: 1px calc(-100% - 1px - 5px);
 }
 
 
@@ -72,6 +72,18 @@ svg {
 svg:hover {
     border-radius: 10px;
     background: rgb(25, 25, 25);
+}
+
+a {
+    transition: 1s;
+    width: max-content;
+    text-decoration: none;
+    color: rgb(108, 110, 174);
+    border-bottom: 2px solid transparent;
+}
+
+a:hover {
+    border-bottom: 2px solid rgb(108, 110, 174);
 }
 
 @keyframes load {

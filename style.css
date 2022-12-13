@@ -1,24 +1,26 @@
 html {
+    margin: 0;
+    padding: 0;
     scroll-behavior: smooth;
 }
 
 body {
-    background-image: url("src/bg.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    font-family: sans-serif;
     color: white;
     overflow-x: hidden;
+    background-size: cover;
+    font-family: sans-serif;
+    background-repeat: no-repeat;
+    background-image: url("src/bg.jpg");
 }
 
 body * {
-    margin: 0;
     top: 0;
     left: 0;
+    margin: 0;
     padding: 0;
 }
 
-.a {
+.header {
     display: flex;
 }
 
@@ -27,13 +29,11 @@ body * {
 }
 
 nav {
-
     flex: 20;
-
-    z-index: 99;
-    position: relative;
-    display: flex;
     width: 100%;
+    z-index: 99;
+    display: flex;
+    position: relative;
     align-items: flex-end;
 }
 
@@ -44,16 +44,16 @@ nav * {
 
 
 .logo img {
-    color: rgba(255, 255, 255, .75);
     width: 75px;
+    color: rgba(255, 255, 255, .75);
 }
 
 nav a {
+    transition: 1s;
+    font-weight: 100;
     text-decoration: none;
     color: rgba(255, 255, 255, .75);
-    font-weight: 100;
     border-bottom: 2px solid transparent;
-    transition: 1s;
 }
 
 nav a:hover {
@@ -61,19 +61,19 @@ nav a:hover {
 }
 
 header {
-    position: absolute;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
     display: grid;
+    position: absolute;
     align-items: center;
 }
 
 header h1 {
     font-size: 200px;
-    text-align: center;
     font-weight: 100;
+    text-align: center;
     letter-spacing: 52px;
     text-transform: uppercase;
     color: rgba(255, 255, 255, .75);
@@ -82,10 +82,10 @@ header h1 {
 
 main {
     /* styling */
-    position: relative;
-    top: 100vh;
     left: 0;
+    top: 100vh;
     width: 100vw;
+    position: relative;
     height: fit-content;
     background: black;
     -moz-box-shadow:      0 0 300px 300px black;
@@ -110,14 +110,14 @@ main {
 
 .grid {
     display: flex;
-    margin: 20px 25%;
     padding: 1rem;
-    border: 1px solid rgb(25, 25, 25);
+    margin: 20px 25%;
     border-radius: 20px;
     color: rgb(200, 200, 200);
+    border: 1px solid rgb(25, 25, 25);
 }
 
-.f {
+.grid-child {
     margin: 1rem;
 }
 
@@ -126,11 +126,11 @@ main {
 }
 
 .grid a {
-    color: rgb(108, 110, 174);
-    text-decoration: none;
-    border-bottom: 2px solid transparent;
-    width: max-content;
     transition: 1s;
+    width: max-content;
+    text-decoration: none;
+    color: rgb(108, 110, 174);
+    border-bottom: 2px solid transparent;
 }
 
 .grid a:hover {
@@ -139,28 +139,28 @@ main {
 
 
 footer {
+    left: 0;
+    margin: 0;
     color: white;
-    background: rgb(10, 10, 10);
-    width: 100vw;
     padding: 2% 10%;
     margin-top: 10%;
-    left: 0;
-    border: 1px solid rgb(25, 25, 25);
+    width: calc(100vw - 2%*2);
+    background: rgb(10, 10, 10);
+    border-top: 1px solid rgb(25, 25, 25);
 }
 
 .links {
-    display: flex;
-    align-items: center;
     width: 40%;
     margin: 0 20%;
+    display: flex;
+    align-items: center;
 }
 
 footer ul {
-    display: block;
-    /* background: rgb(20, 20, 20); */
-    padding: 2rem;
-    text-align: center;
     flex: 1;
+    padding: 2rem;
+    display: block;
+    text-align: center;
 
     list-style: none;
     color: rgb(200, 200, 200);
@@ -171,8 +171,8 @@ footer ul li {
 }
 
 footer ul li a {
-    color: rgb(200, 200, 200);
     transition: 200ms;
+    color: rgb(200, 200, 200);
 }
 
 footer ul li a:hover {
@@ -191,7 +191,7 @@ footer ul li a:hover {
 
     .grid {
         display: grid;
-        grid-template: auto auto / auto;
         margin: 20px 5%;
+        grid-template: auto auto / auto;
     }
 }
